@@ -57,3 +57,14 @@
   margin-left: 10px;
   bottom: 0;
 }
+
+.tweet .icons {
+  position: relative;
+  float: right;
+  color: #00a087;
+  padding: 3px;
+}
+
+.tweet .icons svg {
+  margin: 2px;
+}
