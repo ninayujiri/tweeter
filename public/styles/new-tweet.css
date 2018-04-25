@@ -2,8 +2,7 @@
   background-color: #eee;
   border: 1px solid #adadad;
   border-radius: 10px;
-  padding: 10px;
-  padding-bottom: 33px;
+  padding: 0 10px 35px 10px;
 }
 
 .container .new-tweet .counter {
@@ -19,7 +18,7 @@ textarea {
 h2 {
   text-align: left;
   border-bottom: 1px solid #000;
-
+  margin-top: 10px;
 }
 
 input {

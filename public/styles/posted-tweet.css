@@ -1,0 +1,59 @@
+.tweet {
+  background-color: #fff;
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.tweet:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.tweet header {
+  background-color: #eee;
+  border-radius: 10px 10px 0 0;
+}
+
+.tweet footer {
+  border-top: 1px solid #dadada;
+}
+
+.tweet header img {
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.tweet header h2 {
+  text-align: left;
+  border: none;
+  margin: 0px;
+  padding-top: 15px;
+  height: 70px;
+  margin-left: 10px;
+}
+
+.tweet h4 {
+  font-weight: 300;
+  padding: 10px;
+}
+
+.tweet .handle {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.tweet .time-stamp {
+  text-align: left;
+  font-size: 13px;
+  margin: 5px;
+  margin-left: 10px;
+  bottom: 0;
+}

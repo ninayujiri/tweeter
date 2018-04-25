@@ -21,14 +21,9 @@ body {
 }
 
 .container {
-  position: fixed;
   background-color: #fff;
   width: 450px;
   padding: 2em;
-  top: 0px;
-  bottom: 0px;
-  right: 50%;
-  margin-right: -225px;
-  margin-top: 80px;
+  margin: 80px auto 0;
   z-index: 99;
 }
