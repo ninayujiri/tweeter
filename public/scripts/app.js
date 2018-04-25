@@ -6,6 +6,7 @@
 
 $(document).ready(function() {
 
+// Database
 const data = [
   {
     "user": {
@@ -54,7 +55,7 @@ const data = [
 ];
 
 
-// Loops thru tweets, creates the tweet objects, and appends to the Tweets Container
+// Append each Tweet to the Container
 function renderTweets(tweets) {
   for (let currentTweet of tweets) {
     $('#tweets').append(createTweetElement(currentTweet));

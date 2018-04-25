@@ -6,12 +6,10 @@
   margin-bottom: 20px;
   height: auto;
   opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 .tweet:hover {
   opacity: 1;
-  filter: alpha(opacity=100);
 }
 
 .tweet header {
@@ -63,6 +61,11 @@
   float: right;
   color: #00a087;
   padding: 3px;
+  opacity: 0;
+}
+
+.tweet:hover .icons {
+  opacity: 1;
 }
 
 .tweet .icons svg {
