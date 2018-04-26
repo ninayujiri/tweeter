@@ -95,22 +95,32 @@ $(document).ready(function() {
 
 
   // AJAX request
-  $('form').on('submit', function (event) {
-      event.preventDefault();
-      const data = $( this ).serialize();
+  $('form').on('submit', function () {
+    event.preventDefault();
+    const data = $(this).serialize();
+    const tweetContent = ($.trim($(this.text).val()));
 
-      $.ajax({
-        url: '/tweets/',
-        method: 'POST',
-        data: data
+    if (tweetContent.length === 0) {
+      alert("You submitted an empty tweet! Try again.");
+      return;
+    }
 
-      })
-      .done(function () {
-        loadTweets();
-      })
-      .fail(function () {
-        alert('request failed');
-      });
+    if (tweetContent.length > 140) {
+      alert("Your tweet is too long!");
+      return;
+    }
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets/',
+      data: data
+    }).done(function () {
+      loadTweets();
+      $('form')[0].reset();
+      $('.counter').text(140);
+
+    }).fail(function () {
+    })
   });
 
 

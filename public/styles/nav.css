@@ -1,8 +1,7 @@
 #nav-bar {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   display: block;
   height: 80px;
   padding: 0 2em;
@@ -19,9 +18,28 @@
 }
 
 #nav-bar .header {
-  float: left;
+  overflow: hidden;
+  position: fixed;
   color: #e8fdff;
   font-size: 200%;
   line-height: 80px;
   align-items: center;
+}
+
+#nav-bar .compose-button {
+  float: right;
+  font-weight: 700;
+  color: #00a087;
+  background-color: #eee;
+  border: 1px solid #000;
+  width: 125px;
+  height: 55px;
+  border-radius: 5px;
+  margin: 13px 20px 0 0;
+  opacity: 0.90;
+}
+
+#nav-bar .compose-button:hover {
+  color: #000;
+  opacity: 1;
 }
