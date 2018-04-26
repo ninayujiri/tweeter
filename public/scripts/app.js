@@ -1,10 +1,6 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
+
+  $("textarea").focus();
 
   // Database
   const data = [
@@ -94,7 +90,7 @@ $(document).ready(function() {
   };
 
 
-  // AJAX request
+  // AJAX POST request
   $('form').on('submit', function () {
     event.preventDefault();
     const data = $(this).serialize();
@@ -121,6 +117,13 @@ $(document).ready(function() {
 
     }).fail(function () {
     })
+  });
+
+
+  // Toggle function when Compose button is clicked
+  $( ".compose-button" ).click(function() {
+    $( ".new-tweet" ).slideToggle();
+    $("textarea").focus();
   });
 
 

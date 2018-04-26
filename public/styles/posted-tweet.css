@@ -1,7 +1,7 @@
 .tweet {
   background-color: #fff;
   border: 1px solid #adadad;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-top: 20px;
   margin-bottom: 20px;
   height: auto;
@@ -14,7 +14,7 @@
 
 .tweet header {
   background-color: #eee;
-  border-radius: 10px 10px 0 0;
+  border-radius: 7px 7px 0 0;
 }
 
 .tweet footer {
@@ -24,7 +24,7 @@
 .tweet header img {
   float: left;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .tweet header h2 {
