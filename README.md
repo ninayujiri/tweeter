@@ -2,6 +2,11 @@
 
 Tweeter is a simple, single-page Twitter clone. :baby_chick:
 
+## Final Product
+
+!["GIF of Main Process"]
+!["GIF of Error Messages"]
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.

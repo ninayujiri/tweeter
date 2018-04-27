@@ -37,6 +37,8 @@
 }
 
 .tweet h4 {
+  word-wrap: break-word;
+  white-space: initial;
   font-weight: 300;
   padding: 15px;
 }

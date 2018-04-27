@@ -69,7 +69,6 @@ $(document).ready(function() {
       return $(".new-tweet .error").text($errMsg);
     }
 
-    $(".new-tweet .error").text($errMsg);
     event.preventDefault();
 
     // Posts the tweet, prepends it to the container and clears the form/ counter
@@ -84,10 +83,7 @@ $(document).ready(function() {
       $('.counter').text(140);
     })
     .fail(function () {
-      console.log("request rejected");
-    })
-    .always(function (){
-      console.log("request completed");
+    $(".new-tweet .error").text($errMsg);
     })
   });
 
