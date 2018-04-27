@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
+  // Focuses on the text area as soon as the page loads
   $("textarea").focus();
 
-  // Append each Tweet to the Container
+
+  // Appends each Tweet to the Container
   function renderTweets(tweets) {
     $('#tweets').empty();
     for (let currentTweet of tweets) {
@@ -40,26 +42,26 @@ $(document).ready(function() {
   };
 
 
-  // AJAX POST request
   $('form').on('submit', function (event) {
     event.preventDefault();
     const data = $(this).serialize();
     const tweetContent = ($.trim($(this.text).val()));
 
+    // Checks to make sure tweet form is not empty or over 140 characters
     if (tweetContent.length === 0) {
       $(function() {
-        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 2500)
         $(".new-tweet .error").show();
-        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 2500)
       });
       var $errMsg = "You submitted an empty tweet! Try again.";
     }
 
     if (tweetContent.length > 140) {
       $(function() {
-        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 2500)
         $(".new-tweet .error").show();
-        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 2500)
       });
 
       var $errMsg = "Your tweet is too long!";
@@ -67,10 +69,10 @@ $(document).ready(function() {
       return $(".new-tweet .error").text($errMsg);
     }
 
-
     $(".new-tweet .error").text($errMsg);
     event.preventDefault();
 
+    // Posts the tweet, prepends it to the container and clears the form/ counter
     $.ajax({
       method: 'POST',
       url: '/tweets/',
@@ -109,6 +111,7 @@ $(document).ready(function() {
 
   };
 
+  // Loads the tweets as soon as user lands on the page
   loadTweets();
 
 });

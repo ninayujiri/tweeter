@@ -6,13 +6,11 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
-
 }
 
 .container {
