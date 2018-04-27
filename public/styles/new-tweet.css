@@ -9,11 +9,13 @@
   float: right;
   font-size: 15px;
   font-style: italic;
+  margin-top: 4px;
 }
 
 textarea {
   width: 100%;
   padding: 5px;
+  resize: vertical;
 }
 
 h2 {
@@ -24,4 +26,12 @@ h2 {
 
 input {
   float: left;
+}
+
+.error {
+  position: absolute;
+  padding: 5px 0 0 90px;
+  margin: 0;
+  font-size: 13px;
+  color: red;
 }

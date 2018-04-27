@@ -2,60 +2,8 @@ $(document).ready(function() {
 
   $("textarea").focus();
 
-  // Database
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": {
-  //         "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-  //         "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-  //         "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-  //       },
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": {
-  //         "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-  //         "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-  //         "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-  //       },
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Johann von Goethe",
-  //       "avatars": {
-  //         "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-  //         "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-  //         "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-  //       },
-  //       "handle": "@johann49"
-  //     },
-  //     "content": {
-  //       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-  //     },
-  //     "created_at": 1461113796368
-  //   }
-  // ];
-
-
   // Append each Tweet to the Container
   function renderTweets(tweets) {
-
-    // console.log("tweets: ", tweets);
-
     $('#tweets').empty();
     for (let currentTweet of tweets) {
       $('#tweets').append(createTweetElement(currentTweet));
@@ -65,7 +13,6 @@ $(document).ready(function() {
 
   // Creates a single tweet
   function createTweetElement(tweet) {
-
     let $tweet = $('<article>').addClass('tweet')
       const $header = $("<header>");
       const $footer = $("<footer>");
@@ -85,7 +32,7 @@ $(document).ready(function() {
 
       $footer.append($span);
 
-      $("<p>").addClass("time-stamp").text(tweet.created_at).appendTo($footer);
+      $("<p>").addClass("time-stamp").text(moment.utc(tweet.created_at).fromNow()).appendTo($footer);
 
       $tweet.append($footer);
 
@@ -94,21 +41,35 @@ $(document).ready(function() {
 
 
   // AJAX POST request
-  $('form').on('submit', function () {
+  $('form').on('submit', function (event) {
     event.preventDefault();
     const data = $(this).serialize();
     const tweetContent = ($.trim($(this.text).val()));
 
     if (tweetContent.length === 0) {
-      alert("You submitted an empty tweet! Try again.");
-      return;
+      $(function() {
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+        $(".new-tweet .error").show();
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+      });
+      var $errMsg = "You submitted an empty tweet! Try again.";
     }
 
     if (tweetContent.length > 140) {
-      alert("Your tweet is too long!");
-      return;
+      $(function() {
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+        $(".new-tweet .error").show();
+        setTimeout(function() { $(".new-tweet .error").fadeOut(1500); }, 5000)
+      });
+
+      var $errMsg = "Your tweet is too long!";
+      event.preventDefault();
+      return $(".new-tweet .error").text($errMsg);
     }
 
+
+    $(".new-tweet .error").text($errMsg);
+    event.preventDefault();
 
     $.ajax({
       method: 'POST',
