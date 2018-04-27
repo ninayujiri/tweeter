@@ -6,7 +6,7 @@ $(document).ready(function(event) {
     const numberRemain = 140 - inputLength;
 
     $(this).siblings('.counter').text(numberRemain);
-    counter = $(this).siblings('.counter');
+      counter = $(this).siblings('.counter');
 
   // If user is over the 140 character limit, numbers turn red
     if (numberRemain < 0) {
@@ -14,6 +14,5 @@ $(document).ready(function(event) {
     } else {
       counter.css({"color":"black"});
     }
-
   });
 });

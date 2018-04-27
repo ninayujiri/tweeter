@@ -3,7 +3,6 @@ $(document).ready(function() {
   // Focuses on the text area as soon as the page loads
   $("textarea").focus();
 
-
   // Appends each Tweet to the Container
   function renderTweets(tweets) {
     $('#tweets').empty();
@@ -12,35 +11,32 @@ $(document).ready(function() {
     }
   };
 
-
   // Creates a single tweet
   function createTweetElement(tweet) {
     let $tweet = $('<article>').addClass('tweet')
-      const $header = $("<header>");
-      const $footer = $("<footer>");
-      const $span = $("<span>").addClass("icons");
+    const $header = $("<header>");
+    const $footer = $("<footer>");
+    const $span   = $("<span>").addClass("icons");
 
-      $("<img>").attr('src', tweet.user.avatars.small).appendTo($header);
-      $("<p>").addClass("handle").text(tweet.user.handle).appendTo($header);
-      $("<h2>").addClass("name").text(tweet.user.name).appendTo($header);
+    $("<img>").attr('src', tweet.user.avatars.small).appendTo($header);
+    $("<p>").addClass("handle").text(tweet.user.handle).appendTo($header);
+    $("<h2>").addClass("name").text(tweet.user.name).appendTo($header);
 
-      $tweet.append($header);
+    $tweet.append($header);
 
-      $("<h4>").text(tweet.content.text).appendTo($tweet);
+    $("<h4>").text(tweet.content.text).appendTo($tweet);
 
-      $("<i>").addClass("fas fa-heart").appendTo($span);
-      $("<i>").addClass("fas fa-retweet").appendTo($span);
-      $("<i>").addClass("fas fa-flag").appendTo($span);
+    $("<i>").addClass("fas fa-heart").appendTo($span);
+    $("<i>").addClass("fas fa-retweet").appendTo($span);
+    $("<i>").addClass("fas fa-flag").appendTo($span);
 
-      $footer.append($span);
+    $footer.append($span);
 
-      $("<p>").addClass("time-stamp").text(moment.utc(tweet.created_at).fromNow()).appendTo($footer);
+    $("<p>").addClass("time-stamp").text(moment.utc(tweet.created_at).fromNow()).appendTo($footer);
 
-      $tweet.append($footer);
-
+    $tweet.append($footer);
     return $tweet;
   };
-
 
   $('form').on('submit', function (event) {
     event.preventDefault();
@@ -87,13 +83,11 @@ $(document).ready(function() {
     })
   });
 
-
   // Toggle function when Compose button is clicked
   $( ".compose-button" ).click(function() {
     $( ".new-tweet" ).slideToggle();
     $("textarea").focus();
   });
-
 
   // Gets tweets from the Tweets page
   function loadTweets() {
@@ -104,7 +98,6 @@ $(document).ready(function() {
         renderTweets(data.reverse());
       }
     })
-
   };
 
   // Loads the tweets as soon as user lands on the page
