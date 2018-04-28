@@ -86,6 +86,10 @@ body {
   margin: 80px auto 0;
   z-index: 99;
 
+  @include mQ(768px){
+    width: 75%;
+  }
+
   @include mQ(600px){
     width: 100%;
   }
@@ -96,8 +100,8 @@ body {
     border-radius: 7px;
     padding: 0 10px 35px 10px;
 
-    @include mQ(600px){
-      padding-bottom: 55px;
+    @include mQ(768px){
+      padding-bottom: 50px;
     }
   }
 
@@ -115,16 +119,23 @@ body {
     resize: vertical;
     margin-top: 10px;
 
-    @include mQ(600px){
+    @include mQ(768px){
        height: 100px;
        font-size: 18px;
        padding: 10px;
        margin: 20px 0 8px;
+       border: 1px solid $darkGrey;
     }
   }
 
   #tweetInput {
     float: left;
+
+    @include mQ(768px){
+      font-size: 18px;
+      padding: 8px;
+      border: 1px solid $darkGrey;
+    }
 
     @include mQ(600px){
        font-size: 18px;
@@ -138,7 +149,7 @@ body {
     font-style: italic;
     margin-top: 4px;
 
-    @include mQ(600px){
+    @include mQ(768px){
        font-size: 15px;
     }
   }
@@ -165,7 +176,7 @@ body {
     opacity: 1;
   }
 
-  @include mQ(600px){
+  @include mQ(768px){
      font-size: 18px;
   }
 

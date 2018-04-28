@@ -94,6 +94,9 @@ body {
   padding: 2em;
   margin: 80px auto 0;
   z-index: 99; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 75%; } }
   @media screen and (max-width: 600px) {
     .container {
       width: 100%; } }
@@ -102,9 +105,9 @@ body {
     border: 1px solid #adadad;
     border-radius: 7px;
     padding: 0 10px 35px 10px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .container .new-tweet {
-        padding-bottom: 55px; } }
+        padding-bottom: 50px; } }
   .container .title {
     text-align: left;
     border-bottom: 1px solid #000;
@@ -116,14 +119,20 @@ body {
     padding: 5px;
     resize: vertical;
     margin-top: 10px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .container textarea {
         height: 100px;
         font-size: 18px;
         padding: 10px;
-        margin: 20px 0 8px; } }
+        margin: 20px 0 8px;
+        border: 1px solid #adadad; } }
   .container #tweetInput {
     float: left; }
+    @media screen and (max-width: 768px) {
+      .container #tweetInput {
+        font-size: 18px;
+        padding: 8px;
+        border: 1px solid #adadad; } }
     @media screen and (max-width: 600px) {
       .container #tweetInput {
         font-size: 18px;
@@ -133,7 +142,7 @@ body {
     font-size: 15px;
     font-style: italic;
     margin-top: 4px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .container .counter {
         font-size: 15px; } }
   .container .error {
@@ -153,7 +162,7 @@ body {
   opacity: 0.5; }
   .tweet:hover {
     opacity: 1; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     .tweet {
       font-size: 18px; } }
   .tweet header {
