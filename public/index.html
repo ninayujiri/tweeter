@@ -14,10 +14,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
+    <link href="styles/styles.css" type="text/css" rel="stylesheet"/>
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -33,10 +30,10 @@
 
     <!-- Top Nav bar -->
     <nav id="nav-bar">
-    <img class="logo" src="/images/bird.png" width="80px" height="80px">
-    <span class="header">Tweeter</span>
+    <img id="logo" src="/images/bird.png" width="80px" height="80px">
+    <span id="header">Tweeter</span>
 
-    <button class="compose-button" name="button">
+    <button id="compose-button" name="button">
       <i class="far fa-edit fa-lg"></i> Compose
     </button>
     </nav>
@@ -45,7 +42,7 @@
 
     <!-- Compose Tweet form -->
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 class="title">Compose Tweet</h2>
         <form action="/tweets/" method="post">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input id="tweetInput" type="submit" value="Tweet">

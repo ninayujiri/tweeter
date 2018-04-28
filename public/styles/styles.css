@@ -1,0 +1,167 @@
+/* Variables */
+body {
+  font-family: arial;
+  background: #f8f9fb; }
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0; }
+
+fieldset, img {
+  border: 0; }
+
+li {
+  list-style: none; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+#nav-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 2em;
+  background-color: #00a087;
+  z-index: 100; }
+  #nav-bar #logo {
+    float: left;
+    border-style: none;
+    height: 80px;
+    width: 80px;
+    margin-right: 10px; }
+  #nav-bar #header {
+    overflow: hidden;
+    position: fixed;
+    color: #e8fdff;
+    font-size: 200%;
+    line-height: 80px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  #nav-bar #compose-button {
+    float: right;
+    font-weight: 700;
+    color: #00a087;
+    background-color: #eee;
+    border: 1px solid #000;
+    width: 125px;
+    height: 55px;
+    border-radius: 5px;
+    margin: 13px 20px 0 0;
+    opacity: 0.90; }
+    #nav-bar #compose-button:hover {
+      color: #000;
+      opacity: 1; }
+
+.container {
+  background-color: #fff;
+  width: 450px;
+  padding: 2em;
+  margin: 80px auto 0;
+  z-index: 99; }
+  .container .new-tweet {
+    background-color: #eee;
+    border: 1px solid #adadad;
+    border-radius: 7px;
+    padding: 0 10px 35px 10px; }
+  .container .title {
+    text-align: left;
+    border-bottom: 1px solid #000;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 24px; }
+  .container textarea {
+    width: 100%;
+    padding: 5px;
+    resize: vertical;
+    margin-top: 10px; }
+  .container #tweetInput {
+    float: left; }
+  .container .counter {
+    float: right;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 4px; }
+  .container .error {
+    position: absolute;
+    padding: 5px 0 0 90px;
+    margin: 0;
+    font-size: 13px;
+    color: red; }
+
+.tweet {
+  background-color: #fff;
+  border: 1px solid #adadad;
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  opacity: 0.5; }
+  .tweet:hover {
+    opacity: 1; }
+  .tweet header {
+    background-color: #eee;
+    border-radius: 7px 7px 0 0; }
+    .tweet header .handle {
+      float: right;
+      margin-top: 20px;
+      margin-right: 10px;
+      font-size: 15px; }
+    .tweet header .name {
+      text-align: left;
+      border: none;
+      margin: 0px;
+      padding-top: 15px;
+      height: 70px;
+      margin-left: 10px; }
+    .tweet header img {
+      float: left;
+      margin: 10px;
+      border-radius: 7px; }
+  .tweet h4 {
+    word-wrap: break-word;
+    white-space: initial;
+    font-weight: 300;
+    padding: 15px; }
+  .tweet footer {
+    border-top: 1px solid #dadada; }
+    .tweet footer .icons {
+      position: relative;
+      float: right;
+      color: #00a087;
+      padding: 3px;
+      opacity: 0; }
+      .tweet footer .icons:hover {
+        opacity: 1; }
+      .tweet footer .icons svg {
+        margin: 2px; }
+    .tweet footer .time-stamp {
+      text-align: left;
+      font-size: 13px;
+      margin: 5px;
+      margin-left: 10px;
+      bottom: 0; }

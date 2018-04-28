@@ -84,7 +84,7 @@ $(document).ready(function() {
   });
 
   // Toggle function when Compose button is clicked
-  $( ".compose-button" ).click(function() {
+  $( "#compose-button" ).click(function() {
     $( ".new-tweet" ).slideToggle();
     $("textarea").focus();
   });

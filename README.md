@@ -25,3 +25,4 @@ Tweeter is a simple, single-page Twitter clone. :baby_chick:
 - Moment
 - Nodemon
 - MD5
+- Node Sass
