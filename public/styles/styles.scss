@@ -1,5 +1,6 @@
-@import "variables";
 @import "reset";
+@import "variables";
+@import "mixins";
 
 html {
   box-sizing: border-box;
@@ -25,6 +26,10 @@ body {
   padding: 0 2em;
   background-color: $turquoise;
   z-index: 100;
+
+  @include mQ(600px){
+    padding: 0 1em;
+  }
 
   #logo {
     float: left;
@@ -52,12 +57,24 @@ body {
     width: 125px;
     height: 55px;
     border-radius: 5px;
-    margin: 13px 20px 0 0;
+    margin-top: 13px;
     opacity: 0.90;
 
-     &:hover {
+    &:hover {
       color: #000;
       opacity: 1;
+    }
+
+    @include mQ(600px){
+       width: 100px;
+       font-size: 18px;
+       font-weight: 400;
+    }
+
+    svg {
+      @include mQ(600px){
+       display:none;
+      }
     }
   }
 }
@@ -69,11 +86,19 @@ body {
   margin: 80px auto 0;
   z-index: 99;
 
+  @include mQ(600px){
+    width: 100%;
+  }
+
   .new-tweet {
     background-color: $lightGrey;
     border: 1px solid $darkGrey;
     border-radius: 7px;
     padding: 0 10px 35px 10px;
+
+    @include mQ(600px){
+      padding-bottom: 55px;
+    }
   }
 
   .title {
@@ -89,10 +114,22 @@ body {
     padding: 5px;
     resize: vertical;
     margin-top: 10px;
+
+    @include mQ(600px){
+       height: 100px;
+       font-size: 18px;
+       padding: 10px;
+       margin: 20px 0 8px;
+    }
   }
 
   #tweetInput {
     float: left;
+
+    @include mQ(600px){
+       font-size: 18px;
+       padding: 8px;
+    }
   }
 
   .counter {
@@ -100,6 +137,10 @@ body {
     font-size: 15px;
     font-style: italic;
     margin-top: 4px;
+
+    @include mQ(600px){
+       font-size: 15px;
+    }
   }
 
   .error {
@@ -124,9 +165,17 @@ body {
     opacity: 1;
   }
 
+  @include mQ(600px){
+     font-size: 18px;
+  }
+
   header {
     background-color: #eee;
     border-radius: 7px 7px 0 0;
+
+    @include mQ(600px){
+      padding-bottom: 15px;
+    }
 
     .handle {
       float: right;
@@ -142,6 +191,10 @@ body {
       padding-top: 15px;
       height: 70px;
       margin-left: 10px;
+
+      @include mQ(600px){
+        padding-top: 10px;
+      }
     }
 
     img {
@@ -156,6 +209,10 @@ body {
     white-space: initial;
     font-weight: 300;
     padding: 15px;
+
+    @include mQ(600px){
+      padding-top: 20px;
+    }
   }
 
   footer {
@@ -183,6 +240,10 @@ body {
       margin: 5px;
       margin-left: 10px;
       bottom: 0;
+
+      @include mQ(600px){
+         font-size: 15px;
+      }
     }
   }
 }
