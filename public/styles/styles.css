@@ -200,22 +200,22 @@ body {
         padding-top: 20px; } }
   .tweet footer {
     border-top: 1px solid #dadada; }
-    .tweet footer .icons {
-      position: relative;
-      float: right;
-      color: #00a087;
-      padding: 3px;
-      opacity: 0; }
-      .tweet footer .icons:hover {
-        opacity: 1; }
-      .tweet footer .icons svg {
-        margin: 2px; }
-    .tweet footer .time-stamp {
-      text-align: left;
-      font-size: 13px;
-      margin: 5px;
-      margin-left: 10px;
-      bottom: 0; }
-      @media screen and (max-width: 600px) {
-        .tweet footer .time-stamp {
-          font-size: 15px; } }
+  .tweet .icons {
+    position: relative;
+    float: right;
+    color: #00a087;
+    padding: 3px;
+    opacity: 0; }
+  .tweet:hover footer .icons {
+    opacity: 1; }
+  .tweet svg {
+    margin: 2px; }
+  .tweet .time-stamp {
+    text-align: left;
+    font-size: 13px;
+    margin: 5px;
+    margin-left: 10px;
+    bottom: 0; }
+    @media screen and (max-width: 600px) {
+      .tweet .time-stamp {
+        font-size: 15px; } }

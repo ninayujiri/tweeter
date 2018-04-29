@@ -228,33 +228,34 @@ body {
 
   footer {
     border-top: 1px solid #dadada;
+  }
 
-    .icons {
-      position: relative;
-      float: right;
-      color: #00a087;
-      padding: 3px;
-      opacity: 0;
+  .icons {
+    position: relative;
+    float: right;
+    color: #00a087;
+    padding: 3px;
+    opacity: 0;
+  }
 
-      &:hover {
-        opacity: 1;
-      }
+  .tweet:hover footer .icons {
+    opacity: 1;
+  }
 
-      svg {
-        margin: 2px;
-      }
-    }
+  svg {
+    margin: 2px;
+  }
 
-    .time-stamp {
-      text-align: left;
-      font-size: 13px;
-      margin: 5px;
-      margin-left: 10px;
-      bottom: 0;
+  .time-stamp {
+    text-align: left;
+    font-size: 13px;
+    margin: 5px;
+    margin-left: 10px;
+    bottom: 0;
 
-      @include mQ(600px){
-         font-size: 15px;
-      }
+    @include mQ(600px){
+       font-size: 15px;
     }
   }
+
 }
