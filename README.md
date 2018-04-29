@@ -5,7 +5,7 @@ Tweeter is a simple, single-page Twitter clone. :baby_chick:
 ## Final Product
 
 !["GIF of Main Process"](https://github.com/ninayujiri/tweeter/blob/master/docs/home.gif?raw=true)
-!["GIF of Error Messages"](https://github.com/ninayujiri/tweeter/blob/master/docs/error-messages.gif?raw=true)
+!["GIF of Error Messages"](https://github.com/ninayujiri/tweeter/blob/master/docs/error-message.gif?raw=true)
 !["Screenshot of Responsive Views"](https://github.com/ninayujiri/tweeter/blob/master/docs/responsive.jpg?raw=true)
 
 ## Getting Started
